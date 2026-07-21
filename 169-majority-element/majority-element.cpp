@@ -9,7 +9,14 @@ public:
             if(ans==nums[i])freq++;
             else freq--;
         }
-        return ans;
+        int c=0;
+        for(int val:nums)
+        {
+            if(val==ans)c++;
+        }
+        if(c>n/2)return ans;
+        else return -1;
+        //return ans;
         
         
     }
